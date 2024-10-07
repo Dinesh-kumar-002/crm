@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-<!-- Mirrored from wowdash.wowtheme7.com/demo/table-data.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Sep 2024 05:10:05 GMT -->
+
 
 <head>
     <meta charset="UTF-8">
@@ -40,53 +40,6 @@
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .pull-right {
-            display: flex;
-            justify-content: end;
-        }
-
-        .btn-filter {
-            margin: 10px 0;
-            color: white;
-            background-color: rgb(0, 41, 102);
-        }
-
-        .filterable {
-            margin-top: 15px;
-        }
-
-        .filterable .filters input[disabled] {
-            background-color: transparent;
-            border: none;
-            cursor: auto;
-            box-shadow: none;
-            padding: 0;
-            height: auto;
-        }
-
-        .filterable .filters input[disabled]::-webkit-input-placeholder {
-            color: #333;
-        }
-
-        .filterable .filters input[disabled]::-moz-placeholder {
-            color: #333;
-        }
-
-        .filterable .filters input[disabled]:-ms-input-placeholder {
-            color: #333;
-        }
-
-        .readmore {
-            padding: 6px 15px;
-            background: #002966;
-            color: white;
-            border-radius: 6px;
-            width: max-content;
-        }
-
-        .details {
-            display: none;
-        }
     </style>
 </head>
 
@@ -1011,22 +964,25 @@
                     <li class="fw-medium">Basic Table</li>
                 </ul>
             </div>
-            <div class="pull-right"><button class="btn btn-default btn-xs btn-filter"><span
-                        class="glyphicon glyphicon-filter"></span> Filter</button></div>
+
             <div class="filters">
-                <input type="text" class="form-control" placeholder="Clinet Name" disabled >
-                <input type="text" class="form-control" placeholder="contact Number" disabled >
-                <input type="text" class="form-control" placeholder="DM" disabled >
+                <input type="text" class="form-control client-name" placeholder="Clinet Name" 
+                    id="filter-client">
+                <input type="text" class="form-control contact-number" placeholder="contact Number" 
+                    id="filter-contact">
+                <input type="text" class="form-control dm" placeholder="DM"  id="filter-dm">
             </div>
 
             <div class="conatiner row parent-container">
-                <div class="card radius-12" id="card">
+                <div class="card radius-12" id="card" data-dm="Dhana Lakshmi" data-client="DB Builders"
+                    data-contact="98405 18071">
                     <div class="d-flex justify-content-between p-3">
                         <div class="w-75 d-flex justify-content-between flex-wrap">
                             <div class="d-flex flex-column justify-content-between">
                                 <div class="p-2">
                                     <h5>DB Builders</h5>
                                     <p>Dhana Lakshmi</p>
+                                    <button type="button" class="readmore btn btn-success-600 radius-8 px-20 py-11">See Response</button>
                                 </div>
                             </div>
                             <div class="p-2">
@@ -1039,26 +995,65 @@
                             </div>
                         </div>
                         <div class="p-2">
-                            <img src="assets/images/card-component/horizontal-card-img2.png" alt=""  style="border-radius: 10px;width: 100px;">
+                            <img src="assets/images/card-component/horizontal-card-img2.png" alt=""
+                                style="border-radius: 10px;width: 100px;">
                             <h6 class="my-2">DM0025</h6>
-                            <p class="my-2">21 - 05 -2024</p>
+                            <p class="my-2">21-05-2024</p>
                         </div>
-                       
                     </div>
-
-                    
+                   
                     <div class="details" style="padding: 0 20px 20px 20px;">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt fuga voluptatem cumque
-                        alias temporibus animi quas labore dignissimos ex suscipit veniam provident exercitationem
-                        atque, et recusandae assumenda officia? At, quos eaque. Corporis eum alias tempora tenetur
-                        commodi ipsa, dignissimos debitis velit quia quos eos obcaecati unde nostrum, doloremque soluta.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt fuga voluptatem
+                            cumque
+                            alias temporibus animi quas labore dignissimos ex suscipit veniam provident exercitationem
+                            atque, et recusandae assumenda officia? At, quos eaque. Corporis eum alias tempora tenetur
+                            commodi ipsa, dignissimos debitis velit quia quos eos obcaecati unde nostrum, doloremque
+                            soluta.
                         </p>
                     </div>
-
-                    
+                </div>
+                <div class="card radius-12" id="card" data-dm="Dhana Lakshmi" data-client="DB Builders"
+                    data-contact="98405 18071">
+                    <div class="d-flex justify-content-between p-3">
+                        <div class="w-75 d-flex justify-content-between flex-wrap">
+                            <div class="d-flex flex-column justify-content-between">
+                                <div class="p-2">
+                                    <h5>DB Builders</h5>
+                                    <p>Dhana Lakshmi</p>
+                                    <button type="button" class="readmore btn btn-success-600 radius-8 px-20 py-11">See Response</button>
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <h6>Lead Id</h6>
+                                <p class="pb-0">#12312</p>
+                            </div>
+                            <div class="p-2">
+                                <h6>Contact Number</h6>
+                                <p class="pb-0">+91 98405 18071</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img src="assets/images/card-component/horizontal-card-img2.png" alt=""
+                                style="border-radius: 10px;width: 100px;">
+                            <h6 class="my-2">DM0025</h6>
+                            <p class="my-2">21-05-2024</p>
+                        </div>
+                    </div>
+                   
+                    <div class="details" style="padding: 0 20px 20px 20px;">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt fuga voluptatem
+                            cumque
+                            alias temporibus animi quas labore dignissimos ex suscipit veniam provident exercitationem
+                            atque, et recusandae assumenda officia? At, quos eaque. Corporis eum alias tempora tenetur
+                            commodi ipsa, dignissimos debitis velit quia quos eos obcaecati unde nostrum, doloremque
+                            soluta.
+                        </p>
+                    </div>
                 </div>
               
+
             </div>
 
 
@@ -1107,49 +1102,37 @@
     <script>
         let table = new DataTable('#dataTable');
 
-        $('.filterable .btn-filter').click(function () {
-            var $panel = $(this).parents('.filterable'),
-                $filters = $panel.find('.filters input'),
-                $tbody = $panel.find('.table tbody');
-            if ($filters.prop('disabled') == true) {
-                $filters.prop('disabled', false);
-                $filters.first().focus();
-            } else {
-                $filters.val('').prop('disabled', true);
-                $tbody.find('.no-result').remove();
-                $tbody.find('tr').show();
-            }
-        });
 
-        $('.filterable .filters input').keyup(function (e) {
-            /* Ignore tab key */
-            var code = e.keyCode || e.which;
-            if (code == '9') return;
-            /* Useful DOM data and selectors */
-            var $input = $(this),
-                inputContent = $input.val().toLowerCase(),
-                $panel = $input.parents('.filterable'),
-                column = $panel.find('.filters th').index($input.parents('th')),
-                $table = $panel.find('.parent-container'),
-                $rows = $table.find('.card');
-            /* Dirtiest filter function ever ;) */
-            var $filteredRows = $rows.filter(function () {
-                var value = $(this).find('td').eq(column).text().toLowerCase();
-                return value.indexOf(inputContent) === -1;
-            });
-            /* Clean previous no-result if exist */
-            $table.find('tbody .no-result').remove();
-            /* Show all rows, hide filtered ones (never do that outside of a demo ! xD) */
-            $rows.show();
-            $filteredRows.hide();
-            /* Prepend no-result row if all rows are filtered */
-            if ($filteredRows.length === $rows.length) {
-                $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">No result found</td></tr>'));
-            }
-        });
 
 
         $(document).ready(() => {
+
+
+            function filterCards() {
+
+                var dmFilter = $('#filter-dm').val().toLowerCase();
+                var clientFilter = $('#filter-client').val().toLowerCase();
+                var contactFilter = $('#filter-contact').val().toLowerCase();
+
+                $('.card').hide();
+
+                $('.card').filter(function () {
+                    var dmMatch = $(this).data('dm').toLowerCase().includes(dmFilter);
+                    var clientMatch = $(this).data('client').toLowerCase().includes(clientFilter);
+                    var contactMatch = $(this).data('contact').toLowerCase().includes(contactFilter);
+                    return dmMatch && clientMatch && contactMatch;
+                }).css('display', 'flex');
+            }
+
+            $('#filter-dm, #filter-client, #filter-contact').on('input', filterCards);
+
+
+
+
+
+
+
+
             $('.readmore').on('click', function () {
                 const parent = $(this).closest('.card');
                 const child = parent.children('.details');
