@@ -11997,7 +11997,7 @@ div.dt-container .dt-paging .dt-paging-button:hover:hover, div.dt-container .dt-
 
 .form-select {
   padding: 0.5625rem 1.875rem 0.5625rem 0.9375rem;
-  background-position-x: right;
+  /* background-position-x: right; */
 }
 
 .form-select.form-select-lg {
@@ -12446,12 +12446,14 @@ select option {
   background-image: url(../images/arrow-down.png);
   background-size: 11px 7px;
   background-repeat: no-repeat;
+  background-position: 95%;
 }
 
 [data-theme=dark] .btn-close {
   background-image: url(../images/times.png);
   background-size: auto;
   background-repeat: no-repeat;
+  
   opacity: 1;
 }
 
@@ -14953,3 +14955,18 @@ td.fc-header-center {
 }
 
 /* === footer css end === */
+
+
+
+/* custom  */
+  .pov,.category,.response{
+    display: none;
+  }
+  
+
+  select {
+    -moz-appearance:none !important; /* Firefox */
+    -webkit-appearance:none !important; /* Safari and Chrome */
+    appearance:none !important;
+}
+/* custom  */
