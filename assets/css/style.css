@@ -14983,11 +14983,29 @@ button.custom-button{
 
 .filters {  
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    
+}
+.filters input{
+  margin: 0 2px;
+}
+
+@media only screen and (max-width:550px){
+  .filters{
+    flex-wrap: wrap;
+  }
+  .filters input.form-control{
+    width: 100% !important;
+
+  }
+  
 }
 
 .p-2{
   padding: 10px !important;
+}
+.details{
+  display: none;
 }
 
 /* custom  */
