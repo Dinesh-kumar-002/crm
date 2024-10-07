@@ -12018,9 +12018,9 @@ div.dt-container .dt-paging .dt-paging-button:hover:hover, div.dt-container .dt-
   height: 2.75rem;
 }
 
-.form-control[type=file] {
+/* .form-control[type=file] {
   line-height: 2;
-}
+} */
 
 .form-control[readonly] {
   background-color: var(--neutral-50);
@@ -12459,6 +12459,7 @@ select option {
 
 /* === form css end === */
 /* === card css start === */
+
 .card {
   background-color: var(--white);
   border-radius: 8px;
@@ -12470,6 +12471,7 @@ select option {
   border: none;
   position: initial;
   color: var(--text-secondary-light);
+  margin: 6px 0;
 }
 
 .card .card-header {
@@ -14969,4 +14971,23 @@ td.fc-header-center {
     -webkit-appearance:none !important; /* Safari and Chrome */
     appearance:none !important;
 }
+
+
+button.custom-button{
+  padding: 10px 25px;
+    background: #08244d;
+    border-radius: 6px;
+    color: white;
+    font-weight: 800;
+}
+
+.filters {  
+    display: flex;
+    justify-content: space-around;
+}
+
+.p-2{
+  padding: 10px !important;
+}
+
 /* custom  */
