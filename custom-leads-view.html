@@ -966,11 +966,11 @@
             </div>
 
             <div class="filters">
-                <input type="text" class="form-control client-name" placeholder="Clinet Name" 
+                <input type="text" class="form-control client-name" placeholder="Type Clinet Name" 
                     id="filter-client">
-                <input type="text" class="form-control contact-number" placeholder="contact Number" 
+                <input type="text" class="form-control contact-number" placeholder="Type contact Number" 
                     id="filter-contact">
-                <input type="text" class="form-control dm" placeholder="DM"  id="filter-dm">
+                <input type="text" class="form-control dm" placeholder="Type DM"  id="filter-dm">
             </div>
 
             <div class="conatiner row parent-container">
@@ -991,7 +991,7 @@
                             </div>
                             <div class="p-2">
                                 <h6>Contact Number</h6>
-                                <p class="pb-0">+91 98405 18071</p>
+                                <p class="pb-0">+91 9840518071</p>
                             </div>
                         </div>
                         <div class="p-2">
@@ -1013,14 +1013,14 @@
                         </p>
                     </div>
                 </div>
-                <div class="card radius-12" id="card" data-dm="Dhana Lakshmi" data-client="DB Builders"
-                    data-contact="98405 18071">
+                <div class="card radius-12" id="card" data-dm="bharath" data-client="welldone"
+                    data-contact="7448741492">
                     <div class="d-flex justify-content-between p-3">
                         <div class="w-75 d-flex justify-content-between flex-wrap">
                             <div class="d-flex flex-column justify-content-between">
                                 <div class="p-2">
-                                    <h5>DB Builders</h5>
-                                    <p>Dhana Lakshmi</p>
+                                    <h5>welldone</h5>
+                                    <p>bharath</p>
                                     <button type="button" class="readmore btn btn-success-600 radius-8 px-20 py-11">See Response</button>
                                 </div>
                             </div>
@@ -1030,7 +1030,7 @@
                             </div>
                             <div class="p-2">
                                 <h6>Contact Number</h6>
-                                <p class="pb-0">+91 98405 18071</p>
+                                <p class="pb-0">+91 7448741492</p>
                             </div>
                         </div>
                         <div class="p-2">
@@ -1110,18 +1110,23 @@
 
             function filterCards() {
 
-                var dmFilter = $('#filter-dm').val().toLowerCase();
-                var clientFilter = $('#filter-client').val().toLowerCase();
-                var contactFilter = $('#filter-contact').val().toLowerCase();
+            
+                
+                
 
-                $('.card').hide();
+            $('.card').hide();
 
-                $('.card').filter(function () {
-                    var dmMatch = $(this).data('dm').toLowerCase().includes(dmFilter);
-                    var clientMatch = $(this).data('client').toLowerCase().includes(clientFilter);
-                    var contactMatch = $(this).data('contact').toLowerCase().includes(contactFilter);
-                    return dmMatch && clientMatch && contactMatch;
-                }).css('display', 'flex');
+            $('.card').filter(function () {
+                var dm = $(this).data('dm') ? $(this).data('dm').toString().toLowerCase() : '';
+                var client = $(this).data('client') ? $(this).data('client').toString().toLowerCase() : '';
+                var contact = $(this).data('contact') ? $(this).data('contact').toString().toLowerCase() : '';
+                
+                var dmMatch = dm.includes(dmFilter);
+                var clientMatch = client.includes(clientFilter);
+                var contactMatch = contact.includes(contactFilter);
+                
+                return dmMatch && clientMatch && contactMatch;
+            }).css('display', 'flex');
             }
 
             $('#filter-dm, #filter-client, #filter-contact').on('input', filterCards);
